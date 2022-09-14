@@ -49,9 +49,6 @@ public class AuthTest {
         $("[data-test-id=login] input").setValue(blockedUser.getLogin());
         $("[data-test-id=password] input").setValue(blockedUser.getPassword());
         $("[data-test-id=action-login]").click();
-
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет,
-        //  заблокированного пользователя, для заполнения полей формы используйте пользователя blockedUser
     }
 
     @Test
@@ -62,10 +59,6 @@ public class AuthTest {
         $("[data-test-id=login] input").setValue(wrongLogin);
         $("[data-test-id=password] input").setValue(registeredUser.getPassword());
         $("[data-test-id=action-login]").click();
-
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  логином, для заполнения поля формы "Логин" используйте переменную wrongLogin,
-        //  "Пароль" - пользователя registeredUser
     }
 
     @Test
@@ -77,8 +70,5 @@ public class AuthTest {
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
         $("[data-test-id=password] input").setValue(wrongPassword);
         $("[data-test-id=action-login]").click();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  паролем, для заполнения поля формы "Логин" используйте пользователя registeredUser,
-        //  "Пароль" - переменную wrongPassword
     }
 }
